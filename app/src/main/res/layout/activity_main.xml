@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toplinear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            app:srcCompat="@drawable/refresh_icon" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Ascending"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/applist"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_marginTop="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+    </ListView>
+
+    <TextView
+        android:id="@+id/filterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/applist"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="14dp"
+        android:text="Filtered Apps :" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/noApp">
+
+        <LinearLayout
+            android:id="@+id/horizontallist"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/noApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="No filtered apps to display"
+        android:layout_below="@+id/filterTitle"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
